@@ -39,6 +39,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ### Stand van zaken
 
 -dit ging goed & dit was lastig-
+Opstellen van mijn html ging goed
+De structuur van de detailpagina voor html vind ik wat lastiger (wat moet in wat genest)
 
 **Screenshot(s):**
 
