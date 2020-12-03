@@ -39,8 +39,6 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ### Stand van zaken
 
 -dit ging goed & dit was lastig-
-Opstellen van mijn html ging goed
-De structuur van de detailpagina voor html vind ik wat lastiger (wat moet in wat genest)
 
 **Screenshot(s):**
 
@@ -67,6 +65,8 @@ De structuur van de detailpagina voor html vind ik wat lastiger (wat moet in wat
 
 
 ## Intake (week 1)
+-uitwerken voor de kick-off werkgroep - begin van de eerste week-
+
 **Je startniveau:** Rode piste
 
 **Je focus:** Responsive
