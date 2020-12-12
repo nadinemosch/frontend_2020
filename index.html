@@ -15,54 +15,63 @@
 <body>
     <header>
         <nav>
+            <!-- de button is niet relevant voor screenreaders -->
+            <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
+            <button aria-hidden="true"></button>
             <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
-            <a><img src="" alt="search button">Search</a>
-            <a><img src="" alt="kruisje">Close</a>
             <ul>
-                <li><a href="">Shop</a>
+                <div class="navsection">
+                    <li>
+                        <a><img src="#" alt="search button">Search</a>
+                    </li>
+                    <li>
+                        <a><img src="" alt="kruisje">Close</a>
+                    </li>
+                </div>
+                <li><a href="#">Shop</a>
                     <ul>
                         <!-- deze opdelen in drie ul's zodat je onderscheid maakt in de secties? -->
-                        <li><a href="">Colorado</a></li>
-                        <li><a href="">Signature Stripes</a></li>
-                        <li><a href="">Flares</a></li>
-                        <li><a href="">Basics</a></li>
-                        <li><a href="">T-shirts</a></li>
-                        <li><a href="">Tops &amp; Bodysuits</a></li>
-                        <li><a href="">Pullis &amp; Sweaters</a></li>
-                        <li><a href="">Trousers &amp; Jumpsuits</a></li>
-                        <li><a href="">Skirts &amp; Shorts</a></li>
-                        <li><a href="">Dresses</a></li>
-                        <li><a href="">Jackets &amp; Coats</a></li>
-                        <li><a href="">Kids</a></li>
-                        <li><a href="">Sale</a></li>
+                        <li><a href="#">Colorado</a></li>
+                        <li><a href="#">Signature Stripes</a></li>
+                        <li><a href="#">Flares</a></li>
+                        <li><a href="#">Basics</a></li>
+                        <li><a href="#">T-shirts</a></li>
+                        <li><a href="#">Tops &amp; Bodysuits</a></li>
+                        <li><a href="#">Pullis &amp; Sweaters</a></li>
+                        <li><a href="#">Trousers &amp; Jumpsuits</a></li>
+                        <li><a href="#">Skirts &amp; Shorts</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Jackets &amp; Coats</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Sale</a></li>
                     </ul>
                 </li>
-                <li><a href="">STIEGLITZWORLD</a>
+                <li><a href="#">STIEGLITZWORLD</a>
                     <ul>
-                        <li><a href="">#STIEGLITZLABEL</a></li>
-                        <li><a href="">Strong in Stieglitz</a></li>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Suite</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Contact us</a></li>
+                        <li><a href="#">#STIEGLITZLABEL</a></li>
+                        <li><a href="#">Strong in Stieglitz</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Suite</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                 </li>
-                <li><a href="">Showroom</a></li>
-                <li><a href="">Log in</a></li>
+                <li><a href="#">Showroom</a></li>
+                <li><a href="#">Log in</a></li>
             </ul>
             <!-- klopt het dat ik deze buiten de ul van hierboven? -->
             <ul>
                 <!-- evt img's nesten in links in de li? -->
-                <li><a href="">facebook</a></li>
-                <li><a href="">pinterest</a></li>
-                <li><a href="">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">pinterest</a></li>
+                <li><a href="#">instagram</a></li>
             </ul>
         </nav>
         <!-- is dit juist? -->
-        <a><img src="images/logo.png" alt="Logo"></a>
+        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
         <div>
-            <a><img src="images/wishlist.png" alt="wishlist"></a>
-            <a>Cart</a>
+            <a href="#"><img src="images/wishlist.png" alt="wishlist"></a>
+            <a href="#">Cart</a>
         </div>
     </header>
     <main>
