@@ -21,6 +21,7 @@
             <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
 
             <ul>
+               <!-- deze class weghalen? en dan ul div:first-of-type? -->
                 <div class="navsection">
                     <li>
                         <a><img src="#" alt="search button">Search</a>
@@ -62,7 +63,7 @@
             <!-- klopt het dat ik deze buiten de ul van hierboven? -->
             <ul>
                 <!-- evt img's nesten in links in de li? -->
-                <li><a href="#">facebook</a></li>
+                <li><a href="#"><img src="images/facebook.png" alt="facebook<"></a></li>
                 <li><a href="#">pinterest</a></li>
                 <li><a href="#">instagram</a></li>
             </ul>
@@ -76,7 +77,7 @@
     </header>
     <main>
         <section>
-            <a href=""><img src="images/herospot1.jpg" alt="Colorado collection"></a>
+            <a href=""><img src="images/herospot.png" alt="Colorado collection"></a>
             <!-- de 'shop here' is geen button in dit geval, en het is 1 grote afbeelding-->
         </section>
         <section>
@@ -117,7 +118,7 @@
         </section>
     </main>
     <footer>
-        <!-- links footer -->
+        <!-- links footer accordeons -->
         <ul>
             <li>STIEGLITZWORLD
                 <ul>
@@ -151,7 +152,7 @@
                 <p>Subscribe to our newsletter and be the first to receive the latest news &amp; special offers. </p>
                 <form action="/action_page.php">
                     <fieldset>
-                        <!-- deze moet erin maar zij hebben 'm niet, is deze tekst goed? -->
+                        <!-- deze moet erin maar zij hebben 'm niet, is deze tekst goed? >> display none in css -->
                         <legend>Subscribe to our newsletter</legend>
                         <!-- dit moet een img zijn dus type="img"? en mag deze voor de input field? > In css background-image + tekst doorzichtig maken-->
                         <input type="submit" value="subscribe">
@@ -163,17 +164,20 @@
         </ul>
         <!-- betaalmiddelen -->
         <ul>
-            <li><img src="" alt="AMEX"></li>
-            <li><img src="" alt="Apple Pay"></li>
-            <li><img src="" alt="Bancontact"></li>
-            <li><img src="" alt="iDEAL"></li>
-            <li><img src="" alt="Maestro"></li>
-            <li><img src="" alt="Mastercard"></li>
-            <li><img src="" alt="Paypal"></li>
-            <li><img src="" alt="Klarna"></li>
-            <li><img src="" alt="VISA"></li>
+            <li><img src="images/amex.png" alt="AMEX"></li>
+            <li><img src="images/apple.png" alt="Apple Pay"></li>
+            <li><img src="images/bancontact.png" alt="Bancontact"></li>
+            <li><img src="images/ideal.png" alt="iDEAL"></li>
+            <li><img src="images/maestro.png" alt="Maestro"></li>
+            <li><img src="images/mastercard.png" alt="Mastercard"></li>
+            <li><img src="images/paypal.png" alt="Paypal"></li>
+            <li><img src="images/klarna.png" alt="Klarna"></li>
+            <li><img src="images/visa.png" alt="VISA"></li>
         </ul>
     </footer>
 
     <script src="scripts/script.js"></script>
 </body></html>
+
+<!-- https://www.flaticon.com/free-icon/pinterest_2111601?term=pinterest&page=1&position=1&related_item_id=2111601
+
