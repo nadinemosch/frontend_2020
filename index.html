@@ -19,6 +19,7 @@
             <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
             <button aria-hidden="true"></button>
             <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
+
             <ul>
                 <div class="navsection">
                     <li>
@@ -30,7 +31,6 @@
                 </div>
                 <li><a href="#">Shop</a>
                     <ul>
-                        <!-- deze opdelen in drie ul's zodat je onderscheid maakt in de secties? -->
                         <li><a href="#">Colorado</a></li>
                         <li><a href="#">Signature Stripes</a></li>
                         <li><a href="#">Flares</a></li>
@@ -76,9 +76,8 @@
     </header>
     <main>
         <section>
-            <img src="images/herospot1.jpg" alt="Colorado collection">
-            <!-- de shop here is geen button in dit geval, en het is 1 grote afbeeldin > what to do? -->
-            <button type="button">shop now</button>
+            <a href=""><img src="images/herospot1.jpg" alt="Colorado collection"></a>
+            <!-- de 'shop here' is geen button in dit geval, en het is 1 grote afbeelding-->
         </section>
         <section>
             <article>
@@ -102,7 +101,7 @@
                 <p>A trip to Colorado is never complete without a visit to the Rocky Mountains. As the temperature drops and we enter the rainy days, we don ourselves in warmer clothes with prints that remind us of the summer days past.</p>
             </article>
             <article>
-                <img src="images/articlefoto" alt="">
+                <img src="images/articlefoto5.jpg" alt="">
                 <h2>2nd STOP: THE LAKE</h2>
                 <!-- heb hier 2 p'tjes gebruikt, moet ik hier nog een container omheen zetten om het te stylen? of kan je gewJaoon de p'tjes in de zoveelste article benoemen in je css -->
                 <p>We drove from our motel to the lake for a picnic by plains of greens and flowers.</p>
