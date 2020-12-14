@@ -144,6 +144,7 @@ section article:nth-of-type(6){
     background-color: #F7C8DD;
 }
 
+/*HOE KAN IK HET BESTE DE AFBEELDINGEN STYLEN? HOE BEPAAL IK DE HOOGTE EN BREEDTE?*/
 article img {
     padding: 0;
 }
@@ -164,6 +165,10 @@ footer {
     color: #000000;
     text-decoration: none;
     background-color: #F2DBE8;
+}
+
+footer ul:nth-of-type(2){
+    display: flex;
 }
 
 footer ul a{
