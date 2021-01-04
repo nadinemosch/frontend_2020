@@ -19,15 +19,11 @@
             <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
             <button aria-hidden="true"></button>
             <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
-
             <ul>
                <!-- deze class weghalen? en dan ul div:first-of-type? -->
                 <div class="navsection">
                     <li>
                         <a><img src="#" alt="search button">Search</a>
-                    </li>
-                    <li>
-                        <a><img src="" alt="kruisje">Close</a>
                     </li>
                 </div>
                 <li><a href="#">Shop</a>
@@ -63,9 +59,9 @@
             <!-- klopt het dat ik deze buiten de ul van hierboven? -->
             <ul>
                 <!-- evt img's nesten in links in de li? -->
-                <li><a href="#"><img src="images/facebook.png" alt="facebook<"></a></li>
-                <li><a href="#">pinterest</a></li>
-                <li><a href="#">instagram</a></li>
+                <li><a href="#"><img src="images/facebook.png" alt="facebook logo"></a></li>
+                <li><a href="#"><img src="images/pinterest.png" alt="pinterest logo"></a></li>
+                <li><a href="#"><img src="images/instagram.png" alt="instagram logo"></a></li>
             </ul>
         </nav>
         <!-- is dit juist? -->
@@ -104,7 +100,7 @@
             <article>
                 <img src="images/articlefoto5.jpg" alt="">
                 <h2>2nd STOP: THE LAKE</h2>
-                <!-- heb hier 2 p'tjes gebruikt, moet ik hier nog een container omheen zetten om het te stylen? of kan je gewJaoon de p'tjes in de zoveelste article benoemen in je css -->
+                <!-- heb hier 2 p'tjes gebruikt, moet ik hier nog een container omheen zetten om het te stylen? of kan je gewoon de p'tjes in de zoveelste article benoemen in je css > Jaa -->
                 <p>We drove from our motel to the lake for a picnic by plains of greens and flowers.</p>
                 <p>Revel in the last warm breezes and flower petals of the Colorado summer.</p>
             </article>
@@ -120,35 +116,25 @@
     <footer>
         <!-- links footer accordeons -->
         <ul>
-            <li>STIEGLITZWORLD
-                <ul>
-                    <li><a href="">#STIEGLITZLABEL</a></li>
-                    <li><a href="">Strong in Stieglitz</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Suite</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Contact us</a></li>
-                </ul>
-            </li>
-            <li>Support
-                <ul>
-                    <li><a href="">Shipping &amp; returns </a></li>
+            <li class="accordion">Support
+                <ul class="uitgeklapt">
+                    <li><a href="">Shipping &amp; returns</a></li>
                     <li><a href="">Contact us</a></li>
                     <li><a href="">FAQ</a></li>
                 </ul>
             </li>
-            <li>Legal
-                <ul>
+            <li class="accordion">Legal
+                <ul class="uitgeklapt">
                     <li><a href="">Term &amp; Conditions</a></li>
                 </ul>
             </li>
-            <li>Follow us
-                <ul>
+            <li class="accordion">Follow us
+                <ul class="uitgeklapt">
                     <li><a href="">Instagram</a></li>
                     <li><a href="">Facebook</a></li>
                 </ul>
             </li>
-            <li>Sign up
+            <li class="accordion">Sign up
                 <p>Subscribe to our newsletter and be the first to receive the latest news &amp; special offers. </p>
                 <form action="/action_page.php">
                     <fieldset>
