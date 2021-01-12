@@ -362,15 +362,18 @@ section article:nth-of-type(6) p:nth-of-type(2) {
 
 .detailpagina label {
     display: inline-block;
-    background-color: #ddd;
+    background-color: #ffffff;
     padding: 10px 20px;
-    font-family: sans-serif, Arial;
     font-size: 16px;
-    border: 2px solid #444;
-    border-radius: 4px;
 }
 
-.detailpagina div:nth-of-type(2).
+.detailpagina label:hover {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #000000;
+}
 
 /*add to cart / lijst buttons*/
 .detailpagina section:first-of-type div:nth-of-type(3) {
@@ -389,6 +392,11 @@ section article:nth-of-type(6) p:nth-of-type(2) {
     font-family: 'Epilogue';
     font-weight: 600;
     border: none;
+}
+
+.detailpagina section:first-of-type div:nth-of-type(3) button.welToegevoegd {
+    background-color: #D30E0E;
+    box-shadow: inset 4px 4px 20px #851212;
 }
 
 .detailpagina section:first-of-type div:nth-of-type(3) a img {
