@@ -15,43 +15,46 @@
 <body>
     <header>
         <nav>
-            <!-- de button is niet relevant voor screenreaders -->
-            <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
-            <button aria-hidden="true"></button>
-            <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
+            <div>
+                <!-- de button is niet relevant voor screenreaders -->
+                <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
+                <button aria-hidden="true"></button>
+                <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
+                <a><img src="images/loupe.png" alt="search button"></a>
+            </div>
             <ul>
-               <!-- deze class weghalen? en dan ul div:first-of-type? -->
-                <div class="navsection">
-                    <li>
-                        <a><img src="#" alt="search button">Search</a>
-                    </li>
-                </div>
-                <li><a href="#">Shop</a>
-                    <ul>
-                        <li><a href="#">Colorado</a></li>
-                        <li><a href="#">Signature Stripes</a></li>
-                        <li><a href="#">Flares</a></li>
-                        <li><a href="#">Basics</a></li>
-                        <li><a href="#">T-shirts</a></li>
-                        <li><a href="#">Tops &amp; Bodysuits</a></li>
-                        <li><a href="#">Pullis &amp; Sweaters</a></li>
-                        <li><a href="#">Trousers &amp; Jumpsuits</a></li>
-                        <li><a href="#">Skirts &amp; Shorts</a></li>
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Jackets &amp; Coats</a></li>
-                        <li><a href="#">Kids</a></li>
-                        <li><a href="#">Sale</a></li>
-                    </ul>
+                <li>
+                    <details>
+                        <summary>Shop</summary>
+                        <ul>
+                            <li><a href="#">Colorado</a></li>
+                            <li><a href="#">Signature Stripes</a></li>
+                            <li><a href="#">Flares</a></li>
+                            <li><a href="#">Basics</a></li>
+                            <li><a href="#">T-shirts</a></li>
+                            <li><a href="#">Tops &amp; Bodysuits</a></li>
+                            <li><a href="#">Pullis &amp; Sweaters</a></li>
+                            <li><a href="#">Trousers &amp; Jumpsuits</a></li>
+                            <li><a href="#">Skirts &amp; Shorts</a></li>
+                            <li><a href="#">Dresses</a></li>
+                            <li><a href="#">Jackets &amp; Coats</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </details>
                 </li>
-                <li><a href="#">STIEGLITZWORLD</a>
-                    <ul>
-                        <li><a href="#">#STIEGLITZLABEL</a></li>
-                        <li><a href="#">Strong in Stieglitz</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Suite</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
+                <li>
+                    <details>
+                        <summary>STIEGLITZWORLD</summary>
+                        <ul>
+                            <li><a href="#">#STIEGLITZLABEL</a></li>
+                            <li><a href="#">Strong in Stieglitz</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Suite</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </details>
                 </li>
                 <li><a href="#">Showroom</a></li>
                 <li><a href="#">Log in</a></li>
@@ -114,41 +117,54 @@
         </section>
     </main>
     <footer>
-        <!-- links footer accordeons -->
+        <!-- links footer in accordeons -->
         <ul>
-            <li class="accordion">Support
-                <ul class="uitgeklapt">
-                    <li><a href="">Shipping &amp; returns</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">FAQ</a></li>
-                </ul>
+            <li>
+                <details>
+                    <summary>Support</summary>
+                    <ul>
+                        <li><a href="">Shipping &amp; returns</a></li>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </details>
             </li>
-            <li class="accordion">Legal
-                <ul class="uitgeklapt">
-                    <li><a href="">Term &amp; Conditions</a></li>
-                </ul>
+            <li>
+                <details>
+                    <summary>Legal</summary>
+                    <ul>
+                        <li><a href="">Term &amp; Conditions</a></li>
+                    </ul>
+                </details>
             </li>
-            <li class="accordion">Follow us
-                <ul class="uitgeklapt">
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Facebook</a></li>
-                </ul>
+            <li>
+                <details>
+                    <summary>Follow us</summary>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                    </ul>
+                </details>
             </li>
-            <li class="accordion">Sign up
-                <p>Subscribe to our newsletter and be the first to receive the latest news &amp; special offers. </p>
-                <form action="/action_page.php">
-                    <fieldset>
-                        <!-- deze moet erin maar zij hebben 'm niet, is deze tekst goed? >> display none in css -->
-                        <legend>Subscribe to our newsletter</legend>
-                        <!-- dit moet een img zijn dus type="img"? en mag deze voor de input field? > In css background-image + tekst doorzichtig maken-->
-                        <input type="submit" value="subscribe">
-                        <label for="email">E-mail address:</label>
-                        <input type="email" name="email" placeholder="E-mail address">
-                    </fieldset>
-                </form>
+            <!--            inschrijven voor de nieuwsbrief-->
+            <li>
+                <details>
+                    <summary>Sign up</summary>
+                    <p>Subscribe to our newsletter and be the first to receive the latest news &amp; special offers. </p>
+                    <form action="/action_page.php">
+                        <fieldset>
+                            <!-- deze moet erin maar zij hebben 'm niet, is deze tekst goed? >> display none in css -->
+                            <legend>Subscribe to our newsletter</legend>
+                            <!-- dit moet een img zijn dus type="img"? en mag deze voor de input field? > In css background-image + tekst doorzichtig maken-->
+                            <input type="submit" value="subscribe">
+                            <label for="email">E-mail address:</label>
+                            <input type="email" name="email" placeholder="Enter your email">
+                        </fieldset>
+                    </form>
+                </details>
             </li>
         </ul>
-        <!-- betaalmiddelen -->
+        <!-- betaalmiddelen footer -->
         <ul>
             <li><img src="images/amex.png" alt="AMEX"></li>
             <li><img src="images/apple.png" alt="Apple Pay"></li>
@@ -161,9 +177,7 @@
             <li><img src="images/visa.png" alt="VISA"></li>
         </ul>
     </footer>
-
     <script src="scripts/script.js"></script>
 </body></html>
 
 <!-- https://www.flaticon.com/free-icon/pinterest_2111601?term=pinterest&page=1&position=1&related_item_id=2111601
-

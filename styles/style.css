@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-/* Generic styling */
+/* GENERIC STYLOING */
 * {}
 
 html {
@@ -18,55 +18,64 @@ body {
     font-size: 1em;
 }
 
-h1 {}
+h1 {
+    font-size: 1.2em;
+    color: #1C1D1D;
+    
+}
 
 h2 {
-    font-weight: 700;
     font-size: 2.5em;
+    font-weight: 700;
+}
+
+h4{
+    color: #77787b;
+    margin: 0 0 2em 0;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-decoration: underline
+}
+
+h5{
+    color: #77787b;
+    font-weight: 100;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+
+h6 {
+    color: #77787b;
+    font-weight: 900;
+    font-size: 0.9em;
+    margin: 0 0 2em 0;
 }
 
 p {
     font-weight: 500;
 }
 
-ul {}
-
 li {
     list-style-type: none;
 }
 
-a {}
+a {
+    color: #000000;
+    text-decoration: none;
+}
 
-a:link {}
+img {
+    max-width: 100%;
+}
 
-a:visited {}
-
-a:hover,
-a:focus {}
-
-a:active {}
-
-button {}
-
-/* form styling */
-form {}
-
-fieldset {}
-
-legend {}
-
-label {}
-
-input {}
-
-input:invalid {}
-
-/* Section styling */
+/* HEADER STYLING */
 header {
     font-weight: 600;
+    font-size: 0.9em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*    ze hebben hem zelf niet sticky, maar ik vind dat de gebruiker ten allen tijden het menu moet kunnen gebruiken op mobile*/
     position: sticky;
     top: 0;
     padding: .5em 1em;
@@ -74,16 +83,9 @@ header {
     background-color: #ffffff;
 }
 
-header a {
-    color: #000000;
-    text-decoration: none;
-}
 
-header nav {
-    font-size: 1.25em;
-}
 
-header div {
+header > div {
     width: 5em;
     display: flex;
     justify-content: space-between;
@@ -98,6 +100,34 @@ header div a img {
     height: 1em;
 }
 
+/* Hamburger menu styling */
+header nav {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 4em 0 0;
+    background-color: #F2DBE8;
+    position: fixed;
+    left: 0;
+    right: 40%;
+    top: 0;
+    bottom: 0;
+    transform: translatex(-100%);
+    transition: .5s;
+    z-index: 50;
+    overflow: scroll;
+}
+
+nav ul {
+    margin: 1em;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em 0 1em;
+}
+
 nav button {
     position: relative;
     background-color: transparent;
@@ -106,28 +136,11 @@ nav button {
     appearance: none;
     outline: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 100;
+    order: 1;
 }
 
-/* Waarom zie ik alleen de iconen van de social media? */
-nav ul {
-    margin: 0;
-    padding: 4em 0 0;
-    background-color: #F2DBE8;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0em;
-    bottom: 0;
-    transform: translatex(-100%);
-    transition: .5s;
-    z-index: 0;
-}
-
-nav.toonMenu ul {
-    transform: translatex(0);
-}
-
+/*button VOOR klik*/
 nav button::before {
     content: "\2630";
     display: inline-block;
@@ -135,36 +148,66 @@ nav button::before {
     transform: scale(2);
 }
 
-/* Hoe kan ik het kruisje even groot maken als het hamburger menu? */
+/*button NA klik*/
 nav.toonMenu button::before {
     content: "\02DF";
-    background-color: #F2DBE8;
+    background-color: transparent;
     width: 1em;
-    transform: scale(2);
+    transform: scale(3);
 }
 
-main {}
+nav.toonMenu {
+    transform: translatex(0%);
+}
 
-main button {}
+/*Search button*/
+nav div img {
+    min-width: 1.5em;
+    min-height: 1.5em;
+}
 
-/* HERO SPOT > HOE KRIJG IK DEZE FOTO INGEZOOMD WAARBIJ HET MIDDELSTE DEEL TE ZIEN IS? >> IS EEN ANDERE FOTO ELKE KEER */
+/*Social media links*/
+nav ul:nth-of-type(2) {
+    display: flex;
+}
+
+nav ul li a img {
+    max-width: 1em;
+    margin: 0 .5em 0;
+}
+
+/* MAIN STYLING */
+
+/*INDEX.HTML*/
+/* Hero spot> Hoe krijg ik deze foto zo ingezoomd dat ik alleen het middelste deel zie? >> IS EEN ANDERE FOTO ELKE KEER */
 main section:nth-child(1) img {
     width: 100%;
     margin: auto;
 }
 
-/* WAAROM HEEFT DE TEKST NIET DE WIDTH VAN HET HELE BLOK? */
+/* WAAROM HEEFT DE TEKST NIET DE WIDTH VAN HET HELE BLOK? >> Width 100% toevoegen */
 section article {
-    padding: 4em 1em;
+    padding: 0 0 4em;
     text-align: end;
+}
+
+section article img {
     width: 100%;
+}
+
+section article h2 {
+    margin: 1em .5em;
+}
+
+section article p {
+    margin: 0 1em 0 2em;
+    line-height: 1.5em;
 }
 
 /* Ik wil de img's over de gehele breedte, alleen hoe select ik deze? */
 section article:nth-of-type(1) {
     background-color: #F5B856;
 }
-
 
 section article:nth-of-type(2) {
     background-color: #F0866E;
@@ -184,35 +227,157 @@ section article:nth-of-type(5) {
     background-color: #B2D286;
 }
 
+section article:nth-of-type(5) p:nth-of-type(2) {
+    margin-top: 1em;
+}
+
 
 section article:nth-of-type(6) {
     background-color: #F7C8DD;
 }
 
-/*HOE KAN IK HET BESTE DE AFBEELDINGEN STYLEN? HOE BEPAAL IK DE HOOGTE EN BREEDTE?* >> background ervan maken*/
+section article:nth-of-type(6) p:nth-of-type(2) {
+    margin-top: 1em;
+}
+
 article img {
     width: 100%;
     margin: 0em;
     padding: 0em;
 }
 
-section h2 {}
+/*DETAILPAGINA.HTML*/
 
-article {}
+/*algemeen*/
+.detailpagina h2 {
+    color: #1C1D1D;
+    font-size: 1.4em;
+}
 
-article header {}
+.detailpagina p {
+    font-size: 0.9em;
+}
 
-article h3 {}
+/* BREADcrumbs*/
+.detailpagina nav {
+    font-size: 0.6em;
+    color: #1C1D1D;
+    margin: 1em;
+}
 
-article footer {}
+/*PRODUCT details*/
+.detailpagina section:first-of-type{
+    margin: 0 1em;
+}
 
-aside {}
+.detailpagina section:first-of-type h1 {
+    margin: 1em 0;
+}
+
+.detailpagina section:first-of-type h2 {
+    margin: 0 0 1.5em 0;
+}
+
+.detailpagina section:first-of-type p:first-of-type {
+    margin: 0 0 2em 0;
+}
+
+.detailpagina section:first-of-type p:nth-of-type(2) {
+    margin: 0 0 2em 0;
+}
+
+/*radio buttons*/
+.detailpagina section:first-of-type div:nth-of-type(2){
+    margin: 0 0 2em 0;
+}
+
+/*add to cart / lijst buttons*/
+.detailpagina section:first-of-type div:nth-of-type(3){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 2em 0;
+}
+
+.detailpagina section:first-of-type div:nth-of-type(3) button{
+    width: 90%;
+    background-color: #000000;
+    color:white;
+    padding: .8em 0;
+    font-size: 1em;
+    font-family: 'Epilogue';
+    font-weight: 600;
+    border: none;
+}
+
+/*care instructions en shipping en returns*/
+.detailpagina section:first-of-type div:nth-of-type(3) a img {
+    max-width: 1em;
+}
+
+.detailpagina section:first-of-type details:first-of-type p{
+    font-weight: 100;
+    margin: 0 0 2em 0;
+}
+
+/*social media links*/
+.detailpagina section:first-of-type ul:nth-of-type(2){
+    display: flex;
+    max-width: 75%;
+    justify-content: space-between;
+    margin: 1.5em 0 3em 0;
+}
+
+.detailpagina section:first-of-type ul:nth-of-type(2) img{
+    max-width: 1em;
+}
+
+/* COMPLETE the look*/
+
+.detailpagina section:nth-of-type(2) {
+    margin: 0 1em;
+}
+
+.detailpagina section:nth-of-type(2) h2{
+    text-align: center;
+    margin: 0 0 1.5em 0;
+    font-size: 1.6em;
+}
+
+/*afbeeldingen*/
+.detailpagina section:nth-of-type(2) div{
+    overflow: auto;
+	white-space: nowrap;
+	margin: auto;
+}
+
+.detailpagina section:nth-of-type(2) div a{
+	display: list-item;
+	display: inline-block;
+}
+
+.detailpagina section:nth-of-type(2) div img {
+    width: 15em;
+    margin: 0 1em 0 0;
+}
+
+
+/*#STIEGLITZlabel*/
+.detailpagina section:nth-of-type(3) div{
+    display: flex;
+}
+
+.detailpagina section:nth-of-type(3) img{
+    max-height: 25em;
+    margin: 1em 1em 0 0;
+}
+
+.detailpagina section:nth-of-type(3) h3{
+ text-align: center;
+}
 
 /* FOOTER STYLING */
-
-/* Waarom staat de tekst niet helemaal links uitgelijnd? */
 footer {
-    color: #000000;
     text-decoration: none;
     background-color: #F2DBE8;
     margin: 1em 0 0 0;
@@ -220,64 +385,84 @@ footer {
 }
 
 footer ul {
-    margin: 1em 0 0 0;
+    margin: 1em .5em 0;
+}
+
+/* Eerste deel footer */
+summary {
+    font-size: 0.9em;
+    padding: 1em 0 1em 0;
     letter-spacing: .2em;
-    font-size: .9em;
 }
 
-footer ul a {
+footer li a {
     color: #000000;
-    text-decoration: none;
 }
 
+details ul li {
+    font-size: 1em;
+    font-weight: 600;
+    margin: 1em 0;
+}
 
+details p {
+    color: #77787B;
+    font-weight: 600;
+    margin: 0 0 1em 0;
+}
 
-/* Styling accordeons */
-footer ul:nth-of-type(2) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 2em 3em 2em;
+/* Subscribe to newsletter formulier */
+form {}
+
+fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: .5em 0;
+    width: 60%;
 }
 
 legend {
     display: none;
 }
 
-footer li p {
-    color: #77787b;
-    letter-spacing: 0;
-}
-
-.accordion {
-    width: 100%;
-    transition: 0.4s;
-    margin: 2em 0 2em 0;
-}
-
-.uitgeklapt {
-    padding: 0 18px;
-    background-color: white;
+label {
     display: none;
-    overflow: hidden;
 }
 
-/* Styling betaalmiddelen */
+input[type=email] {
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/*WAAROM PAKT HIJ DEZE KLEUR NIET?*/
+input[placeholder] {
+    color: #000000;
+}
+
+/*IK KRIJG HIER DE AFBEELDING NIET TE ZIEN, WAAROM?*/
+input[type=submit] {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    background-image: url("../images/message.png");
+}
+
+/* Tweede deel footer */
+
+/* Betaalmiddelen */
 footer ul:nth-of-type(2) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 2em 3em 2em;
+    margin: 2em 2em 3em 2em;
 }
 
-footer ul img {
-    max-height: 2em;
+footer ul:nth-of-type(2) img {
     border: 1px solid grey;
+    border-radius: .3em;
 }
 
-/* Breakpoints */
-@media all and (min-width: 30em) {}
-
-@media all and (min-width: 60em) {}
-
-@media all and (min-width: 90em) {}
+footer ul:nth-of-type(2) li {
+    margin: 0 .5em;
+}
