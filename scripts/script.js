@@ -1,12 +1,14 @@
-// JavaScript Document
+//JavaScript Document
 
-// https://codepen.io/shooft/pen/BaKGKwm?editors=1100
+var deButton = document.querySelector('div button');
+deButton.addEventListener('click', toggleMenu);
 
-var deButton = document.querySelector("nav button");
+function toggleMenu() {
+    var deNav = document.querySelector('nav');
+	deNav.classList.toggle('toonMenu');
+}
 
-deButton.addEventListener("click", toggleMenu);
-
-function toggleMenu(event) {
-  deNav = event.target.parentNode;
-  deNav.classList.toggle("toonMenu");
+function myFunction(smallImg) {
+  var fullImg = document.getElementById("imageBox");
+  fullImg.src = smallImg.src;
 }

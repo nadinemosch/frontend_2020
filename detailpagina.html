@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="jouw naam">
+    <meta name="author" content="Nadine Mosch">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>STIEGLITZ Official Webshop</title>
@@ -15,59 +15,63 @@
 <body>
     <header>
         <nav>
+            <!-- voor stylingsredenen div gebruikt hier-->
             <div>
                 <!-- de button is niet relevant voor screenreaders -->
                 <!-- met aria-hidden="true" 'verstop' je de button voor ze -->
                 <button aria-hidden="true"></button>
-                <!-- loop en kruisje zo of op een andere manier? Ze moeten denk in een container zodat ik flexbox kan gebruiken, maar is een div de juiste manier hiervoor? > ul kan width 100% krijgen -->
                 <a><img src="images/loupe.png" alt="search button"></a>
             </div>
-            <ul>
-                <li>
-                    <details>
-                        <summary>Shop</summary>
-                        <ul>
-                            <li><a href="#">Colorado</a></li>
-                            <li><a href="#">Signature Stripes</a></li>
-                            <li><a href="#">Flares</a></li>
-                            <li><a href="#">Basics</a></li>
-                            <li><a href="#">T-shirts</a></li>
-                            <li><a href="#">Tops &amp; Bodysuits</a></li>
-                            <li><a href="#">Pullis &amp; Sweaters</a></li>
-                            <li><a href="#">Trousers &amp; Jumpsuits</a></li>
-                            <li><a href="#">Skirts &amp; Shorts</a></li>
-                            <li><a href="#">Dresses</a></li>
-                            <li><a href="#">Jackets &amp; Coats</a></li>
-                            <li><a href="#">Kids</a></li>
-                            <li><a href="#">Sale</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>STIEGLITZWORLD</summary>
-                        <ul>
-                            <li><a href="#">#STIEGLITZLABEL</a></li>
-                            <li><a href="#">Strong in Stieglitz</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Suite</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contact us</a></li>
-                        </ul>
-                    </details>
-                </li>
-                <li><a href="#">Showroom</a></li>
-                <li><a href="#">Log in</a></li>
-            </ul>
-            <ul>
-                <li><a href="#"><img src="images/facebook.png" alt="facebook logo"></a></li>
-                <li><a href="#"><img src="images/pinterest.png" alt="pinterest logo"></a></li>
-                <li><a href="#"><img src="images/instagram.png" alt="instagram logo"></a></li>
-            </ul>
+            <!-- voor stylingsredenen div gebruikt hier-->
+            <div>
+                <ul>
+                    <li>
+                        <details>
+                            <summary>Shop</summary>
+                            <ul>
+                                <li><a href="#">Colorado</a></li>
+                                <li><a href="#">Signature Stripes</a></li>
+                                <li><a href="#">Flares</a></li>
+                                <li><a href="#">Basics</a></li>
+                                <li><a href="#">T-shirts</a></li>
+                                <li><a href="#">Tops &amp; Bodysuits</a></li>
+                                <li><a href="#">Pullis &amp; Sweaters</a></li>
+                                <li><a href="#">Trousers &amp; Jumpsuits</a></li>
+                                <li><a href="#">Skirts &amp; Shorts</a></li>
+                                <li><a href="#">Dresses</a></li>
+                                <li><a href="#">Jackets &amp; Coats</a></li>
+                                <li><a href="#">Kids</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>STIEGLITZWORLD</summary>
+                            <ul>
+                                <li><a href="#">#STIEGLITZLABEL</a></li>
+                                <li><a href="#">Strong in Stieglitz</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Suite</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="#">Showroom</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+                <!--social media links in de navigatie-->
+                <ul>
+                    <li><a href="#"><img src="images/facebook.png" alt="facebook logo"></a></li>
+                    <li><a href="#"><img src="images/pinterest.png" alt="pinterest logo"></a></li>
+                    <li><a href="#"><img src="images/instagram.png" alt="instagram logo"></a></li>
+                </ul>
+            </div>
         </nav>
-        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        <a href="index.html"><img src="images/logo.png" alt="Stieglitz logo"></a>
         <div>
-            <a href="#"><img src="images/wishlist.png" alt="wishlist"></a>
+            <a href="#"><img src="images/wishlist.png" alt="Wishlist"></a>
             <a href="#">Cart</a>
         </div>
     </header>
@@ -79,13 +83,17 @@
             <a href="">Fowler Sweater</a>
         </nav>
         <!-- product informatie -->
-        <section>
-            <!-- gedraaide carrousel? >> DONDERDAG VRAGEN >> 5fr 1fr (grid) 2 bij 5 -->
+        <section> 
+           <!--product afbeelding container -->
             <div>
-                <img src="images/productfoto1.jpg" alt="">
-                <img src="images/productfoto2.jpg" alt="">
-                <img src="images/productfoto2.jpg" alt="">
-                <img src="images/productfoto2.jpg" alt="">
+                <div class=imgContainer>
+                    <img src="images/productfoto1.jpg" alt="" id="imageBox">
+                </div>
+                <div class=imgKleintjes>
+                    <img src="images/productfoto1.jpg" alt="" onclick="myFunction(this)">
+                    <img src="images/productfoto2.jpg" alt="" onclick="myFunction(this)">
+                    <img src="images/productfoto1.jpg" alt="" onclick="myFunction(this)">
+                </div>
             </div>
             <h1>Fowler Sweater</h1>
             <h2>EUR 99</h2>
@@ -93,16 +101,15 @@
             <p>80% organic cotton 20% polyester</p>
             <!-- hier moet size komen met 3 keuzes en nog een link naar de size guide, hoe doe ik dit correct? >> SPARREN MET JUSTUS >> radio button en in css zo stylen dat het op de site lijkt-->
             <div>
-                <input type="radio" id="small" name="size" value="small" checked><label for="small">
-                    Small
-                </label>
+                <input type="radio" id="small" name="size" value="small" checked>
+                <label for="small">S</label>
                 <input type="radio" id="medium" name="size" value="Medium">
                 <label for="female">M</label>
                 <input type="radio" id="large" name="size" value="Large">
                 <label for="other">L</label>
             </div>
             <div>
-               <button type="button">Add to cart</button>
+                <button type="button">Add to cart</button>
                 <a href=""><img src="images/wishlist.png" alt=""></a>
             </div>
             <!-- hier komen 2 accordeons, doe ik dit correct? >> https://css-tricks.com/exploring-what-the-details-and-summary-elements-can-do/ -->
@@ -147,10 +154,10 @@
                         <h6>Send your return to the following address:</h6>
 
                         <p>eWarehousing attn.<br>
-                        STIEGLITZ RETURNS<br>
-                        Nijverheidsweg 27<br>
-                        3274KJ Heinenoord<br>
-                        Netherlands</p>
+                            STIEGLITZ RETURNS<br>
+                            Nijverheidsweg 27<br>
+                            3274KJ Heinenoord<br>
+                            Netherlands</p>
 
                         <p>The costs of return-shipping your product are at your own expense.</p>
 
@@ -179,9 +186,19 @@
         <section>
             <h2>COMPLETE THE LOOK</h2>
             <div>
-                <a href=""><img src="images/aanbevolenproduct1A.jpg" alt=""></a>
-                <a href=""><img src="images/aanbevolenproduct2A.jpg" alt=""></a>
-                <a href=""><img src="images/aanbevolenproduct3A.jpg" alt=""></a>
+                <a href=""><img src="images/aanbevolenproduct1A.jpg" alt="">
+                    <h3>Fowler Pants</h3>
+                    <h3>EUR 109</h3>
+                </a>
+
+                <a href=""><img src="images/aanbevolenproduct2A.jpg" alt="">
+                    <h3>Erika Pullis</h3>
+                    <h3>EUR 89</h3>
+                </a>
+                <a href=""><img src="images/aanbevolenproduct3A.jpg" alt="">
+                    <h3>Erie Top</h3>
+                    <h3>EUR 79</h3>
+                </a>
             </div>
         </section>
         <!-- #STIEGLITZLABEL -->
@@ -224,16 +241,14 @@
                     </ul>
                 </details>
             </li>
-            <!--            inschrijven voor de nieuwsbrief-->
+            <!--inschrijven voor de nieuwsbrief-->
             <li>
                 <details>
                     <summary>Sign up</summary>
                     <p>Subscribe to our newsletter and be the first to receive the latest news &amp; special offers. </p>
                     <form action="/action_page.php">
                         <fieldset>
-                            <!-- deze moet erin maar zij hebben 'm niet, is deze tekst goed? >> display none in css -->
                             <legend>Subscribe to our newsletter</legend>
-                            <!-- dit moet een img zijn dus type="img"? en mag deze voor de input field? > In css background-image + tekst doorzichtig maken-->
                             <input type="submit" value="subscribe">
                             <label for="email">E-mail address:</label>
                             <input type="email" name="email" placeholder="Enter your email">
@@ -257,6 +272,3 @@
     </footer>
     <script src="scripts/script.js"></script>
 </body></html>
-
-<!--https://www.w3schools.com/tags/tag_select.asp-->
-<!--https://css-tricks.com/css-only-carousel/-->

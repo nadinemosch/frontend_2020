@@ -7,9 +7,7 @@
     padding: 0;
 }
 
-/* GENERIC STYLOING */
-* {}
-
+/* GENERIC STYLING */
 html {
     font-family: 'Epilogue';
 }
@@ -21,7 +19,6 @@ body {
 h1 {
     font-size: 1.2em;
     color: #1C1D1D;
-    
 }
 
 h2 {
@@ -29,7 +26,7 @@ h2 {
     font-weight: 700;
 }
 
-h4{
+h4 {
     color: #77787b;
     margin: 0 0 2em 0;
     font-weight: 600;
@@ -37,11 +34,12 @@ h4{
     text-decoration: underline
 }
 
-h5{
+h5 {
     color: #77787b;
     font-weight: 100;
     font-size: 0.9em;
     text-decoration: underline;
+    margin: 0 0 1em 0;
 }
 
 h6 {
@@ -83,52 +81,18 @@ header {
     background-color: #ffffff;
 }
 
-
-
-header > div {
-    width: 5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header > a:nth-child(2) img {
-    height: 1.5em;
-}
-
-header div a img {
-    height: 1em;
-}
-
-/* Hamburger menu styling */
-header nav {
-    font-size: 1.25em;
-    margin: 0;
-    padding: 4em 0 0;
-    background-color: #F2DBE8;
-    position: fixed;
-    left: 0;
-    right: 40%;
-    top: 0;
-    bottom: 0;
-    transform: translatex(-100%);
-    transition: .5s;
-    z-index: 50;
-    overflow: scroll;
-}
-
+/* Navigatie styling */
 nav ul {
-    margin: 1em;
+    font-size: 1.2em;
 }
 
-nav div {
+header nav div:first-child {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 1em 0 1em;
 }
 
-nav button {
+/*button hamburger*/
+header nav button {
     position: relative;
     background-color: transparent;
     font-size: 1em;
@@ -140,33 +104,109 @@ nav button {
     order: 1;
 }
 
-/*button VOOR klik*/
-nav button::before {
+/*VOOR klik*/
+header nav button::before {
     content: "\2630";
     display: inline-block;
     width: 1em;
+    height: 2em;
+    margin: 1em 1em 0 0;
     transform: scale(2);
 }
 
-/*button NA klik*/
-nav.toonMenu button::before {
+/*NA klik*/
+header nav.toonMenu button::before {
     content: "\02DF";
     background-color: transparent;
     width: 1em;
-    transform: scale(3);
-}
-
-nav.toonMenu {
-    transform: translatex(0%);
+    height: 2em;
+    margin: 1em 1em 0 0;
+    transform: scale(2);
 }
 
 /*Search button*/
-nav div img {
+header nav div:first-child a img {
+    position: relative;
+    z-index: 100;
     min-width: 1.5em;
     min-height: 1.5em;
+    display: none;
 }
 
-/*Social media links*/
+header nav.toonMenu div:first-child a img {
+    display: inline-block;
+}
+
+/*Onderste deel hamburger menu*/
+header nav div:nth-child(2) {
+    position: fixed;
+    left: 0;
+    right: 40%;
+    top: 0;
+    bottom: 0;
+    transform: translatex(-100%);
+    transition: .5s;
+    z-index: 50;
+    padding: 3em 1em;
+}
+
+nav ul:first-child li {
+    margin: .5em 0 0 0;
+}
+
+nav ul:first-child li:last-child {
+    margin: .5em 0 2em 0;
+}
+
+header nav.toonMenu div:nth-child(2) {
+    background: #F2DBE8;
+    transform: translatex(0%);
+}
+
+/*accordeons*/
+header summary {
+    font-size: 0.9em;
+    padding: 1em 0 1em 0;
+    letter-spacing: .2em;
+}
+
+header details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header details summary::-webkit-details-marker {
+    display: none;
+}
+
+header details summary {
+    position: relative;
+    outline: 0;
+}
+
+header details summary:after {
+    content: "\02C7";
+    position: absolute;
+    font-size: 2em;
+    line-height: 0;
+    margin-top: 0.5em;
+    right: 0;
+}
+
+header details[open] summary:after {
+    content: "\02C6";
+}
+
+/*social media links*/
 nav ul:nth-of-type(2) {
     display: flex;
 }
@@ -176,23 +216,40 @@ nav ul li a img {
     margin: 0 .5em 0;
 }
 
+/* Stieglitz logo */
+header > a:nth-child(2) img {
+    height: 1.5em;
+}
+
+/* verlanglijstje + cart */
+header > div {
+    width: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div a img {
+    height: 1em;
+}
+
 /* MAIN STYLING */
 
 /*INDEX.HTML*/
-/* Hero spot> Hoe krijg ik deze foto zo ingezoomd dat ik alleen het middelste deel zie? >> IS EEN ANDERE FOTO ELKE KEER */
 main section:nth-child(1) img {
     width: 100%;
     margin: auto;
 }
 
-/* WAAROM HEEFT DE TEKST NIET DE WIDTH VAN HET HELE BLOK? >> Width 100% toevoegen */
 section article {
     padding: 0 0 4em;
     text-align: end;
 }
 
-section article img {
+article img {
     width: 100%;
+    margin: 0em;
+    padding: 0em;
 }
 
 section article h2 {
@@ -204,7 +261,6 @@ section article p {
     line-height: 1.5em;
 }
 
-/* Ik wil de img's over de gehele breedte, alleen hoe select ik deze? */
 section article:nth-of-type(1) {
     background-color: #F5B856;
 }
@@ -231,19 +287,12 @@ section article:nth-of-type(5) p:nth-of-type(2) {
     margin-top: 1em;
 }
 
-
 section article:nth-of-type(6) {
     background-color: #F7C8DD;
 }
 
 section article:nth-of-type(6) p:nth-of-type(2) {
     margin-top: 1em;
-}
-
-article img {
-    width: 100%;
-    margin: 0em;
-    padding: 0em;
 }
 
 /*DETAILPAGINA.HTML*/
@@ -262,11 +311,11 @@ article img {
 .detailpagina nav {
     font-size: 0.6em;
     color: #1C1D1D;
-    margin: 1em;
+    margin: 2em 1em 1em;
 }
 
 /*PRODUCT details*/
-.detailpagina section:first-of-type{
+.detailpagina section:first-of-type {
     margin: 0 1em;
 }
 
@@ -286,23 +335,55 @@ article img {
     margin: 0 0 2em 0;
 }
 
+/*product afbeeldingen*/
+.detailpagina section:first-of-type div:first-of-type {
+    display: flex;
+}
+
+.detailpagina section:first-of-type div:first-of-type div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailpagina section:first-of-type div:first-of-type div:nth-child(2) img {
+    max-height: 22em;
+}
+
 /*radio buttons*/
-.detailpagina section:first-of-type div:nth-of-type(2){
+.detailpagina section:first-of-type div:nth-of-type(2) {
     margin: 0 0 2em 0;
 }
 
+.detailpagina input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.detailpagina label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.detailpagina div:nth-of-type(2).
+
 /*add to cart / lijst buttons*/
-.detailpagina section:first-of-type div:nth-of-type(3){
+.detailpagina section:first-of-type div:nth-of-type(3) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 2em 0;
 }
 
-.detailpagina section:first-of-type div:nth-of-type(3) button{
+.detailpagina section:first-of-type div:nth-of-type(3) button {
     width: 90%;
     background-color: #000000;
-    color:white;
+    color: white;
     padding: .8em 0;
     font-size: 1em;
     font-family: 'Epilogue';
@@ -310,50 +391,58 @@ article img {
     border: none;
 }
 
-/*care instructions en shipping en returns*/
 .detailpagina section:first-of-type div:nth-of-type(3) a img {
     max-width: 1em;
 }
 
-.detailpagina section:first-of-type details:first-of-type p{
+/*care instructions en shipping en returns*/
+.detailpagina section:first-of-type details:first-of-type p {
     font-weight: 100;
     margin: 0 0 2em 0;
 }
 
+.detailpagina section:first-of-type summary {
+    margin: 0 0 1em 0;
+}
+
 /*social media links*/
-.detailpagina section:first-of-type ul:nth-of-type(2){
+.detailpagina section:first-of-type ul:nth-of-type(2) {
     display: flex;
     max-width: 75%;
     justify-content: space-between;
-    margin: 1.5em 0 3em 0;
+    margin: 4em 0 3em 0;
 }
 
-.detailpagina section:first-of-type ul:nth-of-type(2) img{
+.detailpagina section:first-of-type ul:nth-of-type(2) img {
     max-width: 1em;
 }
 
 /* COMPLETE the look*/
-
 .detailpagina section:nth-of-type(2) {
     margin: 0 1em;
 }
 
-.detailpagina section:nth-of-type(2) h2{
+.detailpagina section:nth-of-type(2) h2 {
     text-align: center;
     margin: 0 0 1.5em 0;
     font-size: 1.6em;
 }
 
 /*afbeeldingen*/
-.detailpagina section:nth-of-type(2) div{
-    overflow: auto;
-	white-space: nowrap;
-	margin: auto;
+.detailpagina section:nth-of-type(2) div:first-of-type {
+    overflow: scroll;
+    white-space: nowrap;
+    margin: auto;
 }
 
-.detailpagina section:nth-of-type(2) div a{
-	display: list-item;
-	display: inline-block;
+.detailpagina section:nth-of-type(2) div:first-of-type a {
+    display: list-item;
+    display: inline-block;
+}
+
+.detailpagina section:nth-of-type(2) div:first-of-type a h3 {
+    font-size: .9em;
+    margin: .5em 0 0 0;
 }
 
 .detailpagina section:nth-of-type(2) div img {
@@ -361,19 +450,23 @@ article img {
     margin: 0 1em 0 0;
 }
 
-
 /*#STIEGLITZlabel*/
-.detailpagina section:nth-of-type(3) div{
+.detailpagina section:nth-of-type(3) div {
     display: flex;
 }
 
-.detailpagina section:nth-of-type(3) img{
+.detailpagina section:nth-of-type(3) a {
+    margin: 0 .5em 0 0;
+}
+
+.detailpagina section:nth-of-type(3) img {
     max-height: 25em;
     margin: 1em 1em 0 0;
 }
 
-.detailpagina section:nth-of-type(3) h3{
- text-align: center;
+.detailpagina section:nth-of-type(3) h3 {
+    text-align: center;
+    margin: 3em 0 0 0;
 }
 
 /* FOOTER STYLING */
@@ -389,10 +482,52 @@ footer ul {
 }
 
 /* Eerste deel footer */
-summary {
+footer summary {
     font-size: 0.9em;
     padding: 1em 0 1em 0;
     letter-spacing: .2em;
+}
+
+footer details[open] summary ~ * {
+    animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer details summary::-webkit-details-marker {
+    display: none;
+}
+
+footer details summary {
+    position: relative;
+    outline: 0;
+}
+
+footer details summary:after {
+    content: "\02C7";
+    position: absolute;
+    font-size: 2em;
+    line-height: 0;
+    margin-top: 0.5em;
+    right: 0;
+}
+
+footer details[open] summary:after {
+    content: "\02C6";
+}
+
+details p {
+    color: #77787B;
+    font-weight: 600;
+    margin: 0 0 1em 0;
 }
 
 footer li a {
@@ -405,26 +540,18 @@ details ul li {
     margin: 1em 0;
 }
 
-details p {
-    color: #77787B;
-    font-weight: 600;
-    margin: 0 0 1em 0;
-}
-
 /* Subscribe to newsletter formulier */
-form {}
-
 fieldset {
     border: 1px solid rgba(0, 0, 0, 0.12);
     padding: .5em 0;
-    width: 60%;
+    width: 80%;
 }
 
-legend {
+footer legend {
     display: none;
 }
 
-label {
+footer label {
     display: none;
 }
 
@@ -433,6 +560,7 @@ input[type=email] {
     border: none;
     font-size: 1em;
     font-weight: 600;
+    text-align: center;
 }
 
 /*WAAROM PAKT HIJ DEZE KLEUR NIET?*/
@@ -444,25 +572,30 @@ input[placeholder] {
 input[type=submit] {
     background-color: transparent;
     color: transparent;
-    border: none;
-    background-image: url("../images/message.png");
+    border: 0;
+    background-image: url("message.png");
+    max-width: 2em;
+    margin: 0 0 0 1em;
 }
 
 /* Tweede deel footer */
 
 /* Betaalmiddelen */
+
+/*IK KRIJG DE AFBEELDINGEN HIER NIET VERDEELD OVER 2 RIJEN, FLEX-WRAP DOET HET NIET*/
 footer ul:nth-of-type(2) {
     display: flex;
+/*    flex-wrap: wrap;*/
     justify-content: space-between;
-    align-items: center;
     margin: 2em 2em 3em 2em;
+}
+
+footer ul:nth-of-type(2) li {
 }
 
 footer ul:nth-of-type(2) img {
     border: 1px solid grey;
     border-radius: .3em;
-}
-
-footer ul:nth-of-type(2) li {
-    margin: 0 .5em;
+    max-width: 2em;
+    margin: 0 .2em 0;
 }
