@@ -8,6 +8,9 @@ function toggleMenu() {
 	deNav.classList.toggle('toonMenu');
 }
 
+//var imgKleintje = document.querySelector();
+//imgKleintje.addEventListener('click',myFunction);
+
 function myFunction(smallImg) {
   var fullImg = document.getElementById("imageBox");
   fullImg.src = smallImg.src;
@@ -15,7 +18,6 @@ function myFunction(smallImg) {
 
 
 var button = document.getElementById('addButton');
-
 button.addEventListener('click', productToevoegen);
 
 function productToevoegen(){
